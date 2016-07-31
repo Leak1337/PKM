@@ -68,7 +68,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Reload";
+            this.button1.Text = "Neu Laden";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -78,7 +78,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 23);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Evolve selected";
+            this.button2.Text = "Entwickeln";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -88,7 +88,7 @@
             this.btnUpgrade.Name = "btnUpgrade";
             this.btnUpgrade.Size = new System.Drawing.Size(135, 23);
             this.btnUpgrade.TabIndex = 3;
-            this.btnUpgrade.Text = "PowerUp selected";
+            this.btnUpgrade.Text = "PowerUp Wählen";
             this.btnUpgrade.UseVisualStyleBackColor = true;
             this.btnUpgrade.Click += new System.EventHandler(this.btnUpgrade_Click);
             // 
@@ -98,7 +98,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(135, 23);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Transfer selected";
+            this.button3.Text = "Verschicken";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -148,15 +148,15 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(299, 409);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 17);
+            this.checkBox1.Size = new System.Drawing.Size(101, 17);
             this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Reload every";
+            this.checkBox1.Text = "Neu Laden alle:";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(383, 407);
+            this.textBox2.Location = new System.Drawing.Point(397, 407);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(37, 20);
             this.textBox2.TabIndex = 7;
@@ -165,7 +165,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(426, 413);
+            this.label2.Location = new System.Drawing.Point(440, 414);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(12, 13);
             this.label2.TabIndex = 9;
@@ -179,11 +179,11 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(494, 434);
+            this.checkBox2.Location = new System.Drawing.Point(487, 414);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(205, 17);
+            this.checkBox2.Size = new System.Drawing.Size(151, 30);
             this.checkBox2.TabIndex = 10;
-            this.checkBox2.Text = "Show only Pokemons that can evolve";
+            this.checkBox2.Text = "Pokemon behalten die\r\nentwickelt werden können\r\n";
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
@@ -193,7 +193,7 @@
             this.btnFullPowerUp.Name = "btnFullPowerUp";
             this.btnFullPowerUp.Size = new System.Drawing.Size(135, 23);
             this.btnFullPowerUp.TabIndex = 11;
-            this.btnFullPowerUp.Text = "FullPowerUp selected";
+            this.btnFullPowerUp.Text = "FullPowerUp Wählen";
             this.btnFullPowerUp.UseVisualStyleBackColor = true;
             this.btnFullPowerUp.Click += new System.EventHandler(this.btnFullPowerUp_Click);
             // 

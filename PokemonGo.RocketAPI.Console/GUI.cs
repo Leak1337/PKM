@@ -716,12 +716,12 @@ namespace PokemonGo.RocketAPI.Console
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/Ar1i/PokemonGo-Bot");
+            Process.Start("https://github.com/Leak1337/PKM");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://high-minded.net/threads/pokemon-go-c-bot-safer-better.50731/");
+            Process.Start("https://github.com/Leak1337/PKM");
         }
 
         private void checkBox7_CheckedChanged_1(object sender, EventArgs e)
@@ -851,6 +851,11 @@ namespace PokemonGo.RocketAPI.Console
         }
 
         private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox8_Enter(object sender, EventArgs e)
         {
 
         }

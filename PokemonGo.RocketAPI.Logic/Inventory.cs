@@ -239,7 +239,7 @@ namespace PokemonGo.RocketAPI.Logic
                         }
                         w.Close();
                     }
-                    Logger.ColoredConsoleWrite(ConsoleColor.Green, $"Export Player Infos and all Pokemon to \"\\Config\\{filename}\"", LogLevel.Info);
+                    Logger.ColoredConsoleWrite(ConsoleColor.Green, $"Speichere alle Infos in: \"\\Config\\{filename}\"", LogLevel.Info);
                 }
                 catch
                 {
@@ -318,14 +318,14 @@ namespace PokemonGo.RocketAPI.Logic
             if (lastegguse > DateTime.Now.AddSeconds(5))
             {
                 TimeSpan duration = lastegguse - DateTime.Now;
-                Logger.ColoredConsoleWrite(ConsoleColor.Cyan, $"Lucky Egg still running: {duration.Minutes}m{duration.Seconds}s");
+                Logger.ColoredConsoleWrite(ConsoleColor.Cyan, $"Glücks Ei ist noch Aktiv: {duration.Minutes}m{duration.Seconds}s");
                 return;
             }
 
             if (luckyEgg == null || luckyEgg.Count <= 0) { return; }
 
             await _client.UseItemXpBoost(ItemId.ItemLuckyEgg);
-            Logger.ColoredConsoleWrite(ConsoleColor.Cyan, $"Used Lucky Egg, remaining: {luckyEgg.Count - 1}");
+            Logger.ColoredConsoleWrite(ConsoleColor.Cyan, $"Benutze Glücks Ei, übrig: {luckyEgg.Count - 1}");
             lastegguse = DateTime.Now.AddMinutes(30);
             await Task.Delay(3000);
         }
