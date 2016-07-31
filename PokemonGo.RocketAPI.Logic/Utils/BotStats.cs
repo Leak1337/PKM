@@ -29,7 +29,7 @@ namespace PokemonGo.RocketAPI.Logic.Utils
 
         public override string ToString()
         {
-            return "xp/h: " + Math.Round((_totalExperience / _getBottingSessionTime())) + "| pokemon/h: " + Math.Round((_totalPokemons / _getBottingSessionTime())) + "";
+            return "Xp/Stunde: " + Math.Round((_totalExperience / _getBottingSessionTime())) + "| Pokemon/Stunde: " + Math.Round((_totalPokemons / _getBottingSessionTime())) + "";
         }
     }
 }
