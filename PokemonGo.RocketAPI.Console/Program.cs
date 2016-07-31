@@ -347,17 +347,17 @@ namespace PokemonGo.RocketAPI.Console
         public static double speed = 50;
         public static int radius = 5000;
         public static bool transfer = true;
-        public static int duplicate = 3;
+        public static int duplicate = 1;
         public static bool evolve = true;
-        public static int maxCp = 999;
+        public static int maxCp = 2000;
         public static int pokeball = 20;
         public static int greatball = 50;
         public static int ultraball = 100;
         public static int masterball = 200;
-        public static int revive = 20;
+        public static int revive = 0;
         public static int potion = 0;
         public static int superpotion = 0;
-        public static int hyperpotion = 50;
+        public static int hyperpotion = 0;
         public static int toppotion = 100;
         public static int toprevive = 50;
         public static int berry = 50;
@@ -370,11 +370,11 @@ namespace PokemonGo.RocketAPI.Console
         public static int telDelay = 5000;
 
         public static int navigation_option = 1;
-        public static bool useluckyegg = true;
-        public static bool useincense = true;
-        public static bool gerNames = false;
+        public static bool useluckyegg = false;
+        public static bool useincense = false;
+        public static bool gerNames = true;
         public static bool pokeList = true;
-        public static bool keepPokemonsThatCanEvolve = true;
+        public static bool keepPokemonsThatCanEvolve = false;
         public static bool pokevision = false;
     }
 }

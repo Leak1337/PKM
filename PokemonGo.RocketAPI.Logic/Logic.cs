@@ -191,7 +191,7 @@ namespace PokemonGo.RocketAPI.Logic
 
             Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "_____________________________");
             Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "Level: " + c.Level);
-            Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "EXP Needed: " + expneeded);
+            Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "EXP Benötigt: " + expneeded);
             Logger.ColoredConsoleWrite(ConsoleColor.Cyan, $"Akutelle EXP: {curexp} ({Math.Round(curexppercent)}%)");
             Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "EXP für Level up: " + ((c.NextLevelXp) - (c.Experience)));
             Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "KM Gelaufen: " + c.KmWalked);
