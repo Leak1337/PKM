@@ -255,7 +255,7 @@ namespace PokemonGo.RocketAPI.Console
                 catch (Exception ex)
                 {
                     Logger.ColoredConsoleWrite(ConsoleColor.Red, $"Unhandled exception: {ex}", LogLevel.Error);
-                    Logger.Error("Restarting in 20 Seconds.");
+                    Logger.Error("Starte neu in 20 Sekunden.");
                     Thread.Sleep(200000);
                     new Logic.Logic(new Settings()).Execute().Wait();
                 }
@@ -287,14 +287,14 @@ namespace PokemonGo.RocketAPI.Console
                     return;
                 }
 
-                Logger.ColoredConsoleWrite(ConsoleColor.Red, "There is a new Version available: " + gitVersion);
-                Logger.ColoredConsoleWrite(ConsoleColor.Red, "Its recommended to use the newest Version.");
-                Logger.ColoredConsoleWrite(ConsoleColor.Red, "Starting in 10 Seconds.");
+               // Logger.ColoredConsoleWrite(ConsoleColor.Red, "There is a new Version available: " + gitVersion);
+               // Logger.ColoredConsoleWrite(ConsoleColor.Red, "Its recommended to use the newest Version.");
+               // Logger.ColoredConsoleWrite(ConsoleColor.Red, "Starting in 10 Seconds.");
                 Thread.Sleep(10000);
             }
             catch (Exception)
             {
-                Logger.ColoredConsoleWrite(ConsoleColor.White, "Unable to check for updates now...");
+              //  Logger.ColoredConsoleWrite(ConsoleColor.White, "Unable to check for updates now...");
             }
         }
 
@@ -332,7 +332,7 @@ namespace PokemonGo.RocketAPI.Console
             using (var wC = new WebClient())
                 return
                     wC.DownloadString(
-                        "https://raw.githubusercontent.com/Ar1i/PokemonGo-Bot/master/PokemonGo.RocketAPI.Console/Properties/AssemblyInfo.cs");
+                        "https://github.com/Leak1337/PKM/blob/master/PokemonGo.RocketAPI.Console/Properties/AssemblyInfo.cs");
         }
     }
     public static class Globals

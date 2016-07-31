@@ -54,11 +54,11 @@ namespace PokemonGo.RocketAPI
                         double dif2 = longitude - _settings.DefaultLongitude;
                         if (dif1 > 3 || dif1 < -3 || dif2 > 3 || dif2 < -3)
                         {
-                            Logger.ColoredConsoleWrite(ConsoleColor.Red, "There is a difference of your Last Location File.\n" + path);
-                            Logger.ColoredConsoleWrite(ConsoleColor.Red, "Latidude difference: " + dif1 + " Longitude difference :" + dif2);
-                            Logger.ColoredConsoleWrite(ConsoleColor.Red, "Sleeping 10 Seconds.");
+                            Logger.ColoredConsoleWrite(ConsoleColor.Red, "Unterschied entdeckt zu deinem letzten Standort File.\n" + path);
+                            Logger.ColoredConsoleWrite(ConsoleColor.Red, "Latidude Unterschied: " + dif1 + " Longitude Unterschied:" + dif2);
+                            Logger.ColoredConsoleWrite(ConsoleColor.Red, "Warte 10 Sekunden.");
                             Thread.Sleep(10000);
-                            Logger.ColoredConsoleWrite(ConsoleColor.Red, "I warned you. Starting..");
+                            Logger.ColoredConsoleWrite(ConsoleColor.Red, "Ich hab dich Gewarnt. Starte..");
                             
                         }
 
@@ -198,10 +198,10 @@ namespace PokemonGo.RocketAPI
             _apiUrl = serverResponse.ApiUrl;
             if (_apiUrl != "")
             { 
-                Logger.ColoredConsoleWrite(ConsoleColor.Green, "We got the API Url: " + _apiUrl);
+                Logger.ColoredConsoleWrite(ConsoleColor.Green, "Wir haben die API Url: " + _apiUrl);
             } else
             {
-                Logger.Error("PokemonGo Servers are probably Offline.");
+                Logger.Error("PokemonGo Server sind eventuell Offline.");
             }
         }
 
