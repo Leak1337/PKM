@@ -87,7 +87,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
@@ -107,15 +106,12 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -124,9 +120,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -707,17 +701,6 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Max Pokeballs:";
             // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(74, 577);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(535, 16);
-            this.label30.TabIndex = 9;
-            this.label30.Text = "This Bot is absolutely free and open source! Chargeback if you\'ve paid for it!";
-            this.label30.Click += new System.EventHandler(this.label30_Click);
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.checkBox4);
@@ -817,7 +800,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.button1.Location = new System.Drawing.Point(267, 548);
+            this.button1.Location = new System.Drawing.Point(150, 548);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(350, 23);
             this.button1.TabIndex = 13;
@@ -902,7 +885,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(6, 21);
+            this.linkLabel1.Location = new System.Drawing.Point(87, 529);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(38, 13);
             this.linkLabel1.TabIndex = 15;
@@ -910,22 +893,9 @@
             this.linkLabel1.Text = "Github";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(90, 21);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(110, 13);
-            this.linkLabel2.TabIndex = 16;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "HighMinded (Support)";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.linkLabel1);
-            this.groupBox9.Controls.Add(this.linkLabel2);
-            this.groupBox9.Location = new System.Drawing.Point(9, 520);
+            this.groupBox9.Location = new System.Drawing.Point(334, 605);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(252, 51);
             this.groupBox9.TabIndex = 18;
@@ -995,36 +965,12 @@
             this.checkBox8.UseVisualStyleBackColor = true;
             this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(74, 595);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(549, 15);
-            this.label32.TabIndex = 20;
-            this.label32.Text = "Whenever you encounter something related to \"Pokecrop\", tell them the Bot is stol" +
-    "en!";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PokemonGo.RocketAPI.Console.Properties.Resources.donate;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 577);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 33);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(626, 620);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label30);
+            this.ClientSize = new System.Drawing.Size(628, 580);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox6);
@@ -1036,10 +982,11 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "GUI";
-            this.Text = "PokeGoBot GUI Edition | Gui by GreenGold | Edit by IceQ1337 |";
+            this.Text = "Pokemon Bot 1.3.3.7";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GUI_FormClosing);
             this.Load += new System.EventHandler(this.GUI_Load);
             this.groupBox1.ResumeLayout(false);
@@ -1058,11 +1005,8 @@
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1140,7 +1084,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox10;
@@ -1152,11 +1095,8 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
