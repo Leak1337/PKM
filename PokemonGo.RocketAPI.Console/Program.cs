@@ -240,14 +240,14 @@ namespace PokemonGo.RocketAPI.Console
                 }
                 catch (PtcOfflineException)
                 {
-                    Logger.ColoredConsoleWrite(ConsoleColor.Red, "PTC Servers are probably down OR you credentials are wrong.", LogLevel.Error);
-                    Logger.ColoredConsoleWrite(ConsoleColor.Red, "Trying again in 20 seconds...");
+                    Logger.ColoredConsoleWrite(ConsoleColor.Red, "PTC Servers sind möglicherweise down..", LogLevel.Error);
+                    Logger.ColoredConsoleWrite(ConsoleColor.Red, "Versuche erneut in 20 sekunden...");
                     Thread.Sleep(20000);
                     new Logic.Logic(new Settings()).Execute().Wait();
                 }
                 catch (AccountNotVerifiedException)
                 {
-                    Logger.ColoredConsoleWrite(ConsoleColor.Red, "Your PTC Account is not activated. Exiting in 10 Seconds.");
+                    Logger.ColoredConsoleWrite(ConsoleColor.Red, "Dein PTC Account ist nicht Aktiviert. Schließe in 10 Sekunden.");
                     Thread.Sleep(10000);
                     Environment.Exit(0);
                 }

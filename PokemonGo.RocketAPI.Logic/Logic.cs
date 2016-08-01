@@ -42,7 +42,7 @@ namespace PokemonGo.RocketAPI.Logic
         {
             Logger.ColoredConsoleWrite(ConsoleColor.Red, "Bereite Exploit vor!");
             Logger.ColoredConsoleWrite(ConsoleColor.Red, "Hacken uns in die Datenbank!");
-            Logger.ColoredConsoleWrite(ConsoleColor.Green, $"Kidding, starte Anfrage an Google:: {_clientSettings.AuthType}", LogLevel.Info);
+            Logger.ColoredConsoleWrite(ConsoleColor.Green, $"Kidding, starte Anfrage an: {_clientSettings.AuthType}", LogLevel.Info);
 
             while (true)
             {
@@ -76,7 +76,7 @@ namespace PokemonGo.RocketAPI.Logic
                 }
                 catch (PtcOfflineException)
                 {
-                    Logger.Error("PTC Server Offline. Trying to Restart in 20 Seconds...");
+                    Logger.Error("PTC Server Offline. Starte neu in 20 Sekunden...");
                     try
                     {
                         _telegram.getClient().StopReceiving();
@@ -192,7 +192,7 @@ namespace PokemonGo.RocketAPI.Logic
             Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "_____________________________");
             Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "Level: " + c.Level);
             Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "EXP Benötigt: " + expneeded);
-            Logger.ColoredConsoleWrite(ConsoleColor.Cyan, $"Akutelle EXP: {curexp} ({Math.Round(curexppercent)}%)");
+            Logger.ColoredConsoleWrite(ConsoleColor.Cyan, $"Aktuelle EXP: {curexp} ({Math.Round(curexppercent)}%)");
             Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "EXP für Level up: " + ((c.NextLevelXp) - (c.Experience)));
             Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "KM Gelaufen: " + c.KmWalked);
             Logger.ColoredConsoleWrite(ConsoleColor.Cyan, "PokeStops Besucht: " + c.PokeStopVisits);
@@ -412,7 +412,7 @@ namespace PokemonGo.RocketAPI.Logic
                         i = "/";
                     }
 
-                    Logger.ColoredConsoleWrite(ConsoleColor.Green, $"Farmed XP: {fortSearch.ExperienceAwarded}, Gems: { fortSearch.GemsAwarded}, Eier: {egg} Items: {i}", LogLevel.Info);
+                    Logger.ColoredConsoleWrite(ConsoleColor.Green, $"Gefarmt XP: {fortSearch.ExperienceAwarded}, Gems: { fortSearch.GemsAwarded}, Eier: {egg} Items: {i}", LogLevel.Info);
                 } else {
                     failed_softban++; 
                     if (failed_softban >= 6)
@@ -513,7 +513,7 @@ namespace PokemonGo.RocketAPI.Logic
                         foreach (int xp in caughtPokemonResponse.Scores.Xp)
                             _botStats.addExperience(xp);
 
-                        Logger.ColoredConsoleWrite(ConsoleColor.Magenta, $"Wir haben ein: {StringUtils.getPokemonNameByLanguage(_clientSettings, pokemon.PokemonId)} gefangen mit CP: {encounterPokemonResponse?.WildPokemon?.PokemonData?.Cp} ({PokemonInfo.CalculatePokemonPerfection(encounterPokemonResponse?.WildPokemon.PokemonData)}% perfect) benutzte ein: {bestPokeball} und wir bekommen: {caughtPokemonResponse.Scores.Xp.Sum()} XP.");
+                        Logger.ColoredConsoleWrite(ConsoleColor.Magenta, $"Wir haben ein {StringUtils.getPokemonNameByLanguage(_clientSettings, pokemon.PokemonId)} gefangen mit: {encounterPokemonResponse?.WildPokemon?.PokemonData?.Cp} CP ({PokemonInfo.CalculatePokemonPerfection(encounterPokemonResponse?.WildPokemon.PokemonData)}% perfekt) mit einem: {bestPokeball} und wir bekommen: {caughtPokemonResponse.Scores.Xp.Sum()} XP.");
 
                         //try
                         //{
@@ -572,7 +572,7 @@ namespace PokemonGo.RocketAPI.Logic
 
                 if (evolvePokemonOutProto.Result == EvolvePokemonOut.Types.EvolvePokemonStatus.PokemonEvolvedSuccess)
                 {
-                    Logger.ColoredConsoleWrite(ConsoleColor.Green, $"Entwickle: {StringUtils.getPokemonNameByLanguage(_clientSettings, pokemon.PokemonId)} mit {pokemon.Cp} CP ({PokemonInfo.CalculatePokemonPerfection(pokemon)} % perfect) erfolgreich zu {StringUtils.getPokemonNameByLanguage(_clientSettings, evolvePokemonOutProto.EvolvedPokemon.PokemonType)} mit {evolvePokemonOutProto.EvolvedPokemon.Cp} CP ({PokemonInfo.CalculatePokemonPerfection(evolvePokemonOutProto.EvolvedPokemon)} % perfect) für {evolvePokemonOutProto.ExpAwarded}xp", LogLevel.Info);
+                    Logger.ColoredConsoleWrite(ConsoleColor.Green, $"Entwickle: {StringUtils.getPokemonNameByLanguage(_clientSettings, pokemon.PokemonId)} mit {pokemon.Cp} CP ({PokemonInfo.CalculatePokemonPerfection(pokemon)} % perfekt) erfolgreich zu {StringUtils.getPokemonNameByLanguage(_clientSettings, evolvePokemonOutProto.EvolvedPokemon.PokemonType)} mit {evolvePokemonOutProto.EvolvedPokemon.Cp} CP ({PokemonInfo.CalculatePokemonPerfection(evolvePokemonOutProto.EvolvedPokemon)} % perfekt) für {evolvePokemonOutProto.ExpAwarded}xp", LogLevel.Info);
                     _botStats.addExperience(evolvePokemonOutProto.ExpAwarded);
                 }
                 else
@@ -606,7 +606,7 @@ namespace PokemonGo.RocketAPI.Logic
                         var bestPokemonOfType = await _inventory.GetHighestCPofType(duplicatePokemon);
 
                         var transfer = await _client.TransferPokemon(duplicatePokemon.Id);
-                        Logger.ColoredConsoleWrite(ConsoleColor.Yellow, $"Verschicke {StringUtils.getPokemonNameByLanguage(_clientSettings, duplicatePokemon.PokemonId)} mit {duplicatePokemon.Cp} CP ({PokemonInfo.CalculatePokemonPerfection(duplicatePokemon)} % perfect) (Beste: {bestPokemonOfType} CP)", LogLevel.Info);
+                        Logger.ColoredConsoleWrite(ConsoleColor.Yellow, $"Verschicke {StringUtils.getPokemonNameByLanguage(_clientSettings, duplicatePokemon.PokemonId)} mit {duplicatePokemon.Cp} CP ({PokemonInfo.CalculatePokemonPerfection(duplicatePokemon)} % perfekt) (Beste: {bestPokemonOfType} CP)", LogLevel.Info);
                         await RandomHelper.RandomDelay(500, 700);
                     }
                 }
@@ -620,7 +620,7 @@ namespace PokemonGo.RocketAPI.Logic
             foreach (var item in items)
             {
                 var transfer = await _client.RecycleItem((ItemId)item.Item_, item.Count);
-                Logger.ColoredConsoleWrite(ConsoleColor.Yellow, $"Recycled {item.Count}x {(ItemId)item.Item_}", LogLevel.Info);
+                Logger.ColoredConsoleWrite(ConsoleColor.Yellow, $"Entferne {item.Count}x {(ItemId)item.Item_}", LogLevel.Info);
                 await RandomHelper.RandomDelay(500, 700);
             }
         }

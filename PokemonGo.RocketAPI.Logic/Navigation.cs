@@ -68,7 +68,7 @@ namespace PokemonGo.RocketAPI.Logic
                 {
                     if (speedInMetersPerSecond > SpeedDownTo)
                     {
-                        Logger.ColoredConsoleWrite(ConsoleColor.DarkCyan, $"Wir sind 30 Meter vor dem Ziel. Geschwindigkeit auf ~10 km/h.");
+                        Logger.ColoredConsoleWrite(ConsoleColor.DarkCyan, $"Wir sind 30 Meter vor dem Ziel. Geschwindigkeit auf ~10 km/h Reduziert.");
                         speedInMetersPerSecond = SpeedDownTo;
                     }
                 }
