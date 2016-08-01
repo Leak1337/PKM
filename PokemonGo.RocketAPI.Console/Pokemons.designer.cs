@@ -144,11 +144,12 @@
             this.statusTexbox.Name = "statusTexbox";
             this.statusTexbox.Size = new System.Drawing.Size(686, 20);
             this.statusTexbox.TabIndex = 5;
+            this.statusTexbox.TextChanged += new System.EventHandler(this.statusTexbox_TextChanged);
             // 
             // checkBoxreload
             // 
             this.checkBoxreload.AutoSize = true;
-            this.checkBoxreload.Location = new System.Drawing.Point(235, 410);
+            this.checkBoxreload.Location = new System.Drawing.Point(273, 409);
             this.checkBoxreload.Name = "checkBoxreload";
             this.checkBoxreload.Size = new System.Drawing.Size(97, 17);
             this.checkBoxreload.TabIndex = 6;
@@ -158,7 +159,7 @@
             // 
             // reloadsecondstextbox
             // 
-            this.reloadsecondstextbox.Location = new System.Drawing.Point(338, 408);
+            this.reloadsecondstextbox.Location = new System.Drawing.Point(376, 407);
             this.reloadsecondstextbox.Name = "reloadsecondstextbox";
             this.reloadsecondstextbox.Size = new System.Drawing.Size(37, 20);
             this.reloadsecondstextbox.TabIndex = 7;
@@ -167,7 +168,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(381, 412);
+            this.label2.Location = new System.Drawing.Point(419, 413);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(12, 13);
             this.label2.TabIndex = 9;
@@ -208,7 +209,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Pokemons";
-            this.Text = "Pokemon List";
+            this.Text = "Pokemon Liste";
             this.Load += new System.EventHandler(this.Pokemons_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);

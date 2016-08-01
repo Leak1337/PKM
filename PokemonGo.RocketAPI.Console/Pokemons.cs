@@ -637,6 +637,11 @@ namespace PokemonGo.RocketAPI.Console
                 EnabledButton(true);
             }
         }
+
+        private void statusTexbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     public static class ControlExtensions
     {
