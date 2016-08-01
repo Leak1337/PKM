@@ -48,7 +48,7 @@ namespace PokemonGo.RocketAPI.Console
         private async void Execute()
         {
             EnabledButton(false);
-            textBox1.Text = "Reloading Pokemon list.";
+            textBox1.Text = "Lade die Pokemon liste neu.";
 
             client = new Client(ClientSettings);
 
@@ -107,13 +107,13 @@ namespace PokemonGo.RocketAPI.Console
                 columnheader.Text = "LVL";
                 listView1.Columns.Add(columnheader);
                 columnheader = new ColumnHeader();
-                columnheader.Text = "Evolvable?";
+                columnheader.Text = "Entwickelbar?";
                 listView1.Columns.Add(columnheader);
                 columnheader = new ColumnHeader();
-                columnheader.Text = "Height";
+                columnheader.Text = "Höhe";
                 listView1.Columns.Add(columnheader);
                 columnheader = new ColumnHeader();
-                columnheader.Text = "Weight";
+                columnheader.Text = "Gewicht";
                 listView1.Columns.Add(columnheader);
                 columnheader = new ColumnHeader();
                 columnheader.Text = "Attack";
@@ -176,7 +176,7 @@ namespace PokemonGo.RocketAPI.Console
                     listView1.Items.Add(listViewItem);
                 }
                 listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-                Text = "Pokemon List | User: " + profile.Profile.Username + " | Pokemons: " + pokemons.Count() + "/" + profile.Profile.PokeStorage;
+                Text = "Pokemon Liste | User: " + profile.Profile.Username + " | Pokemon: " + pokemons.Count() + "/" + profile.Profile.PokeStorage;
                 EnabledButton(true);
 
                 textBox1.Text = string.Empty;
@@ -274,7 +274,7 @@ namespace PokemonGo.RocketAPI.Console
             var pokemon = (PokemonData)listView1.SelectedItems[0].Tag;
             taskResponse resp = new taskResponse(false, string.Empty);
 
-            if (MessageBox.Show(this, pokemon.PokemonId + " with " + pokemon.Cp + " CP thats " + Math.Round(Perfect(pokemon)) + "% perfect", "Are you sure you want to transfer?", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show(this, pokemon.PokemonId + " mit " + pokemon.Cp + " CP " + Math.Round(Perfect(pokemon)) + "% perfekt", "Bist du sicher das du es verschicken willst?", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 resp = await transferPokemon(pokemon);
             }
@@ -285,7 +285,7 @@ namespace PokemonGo.RocketAPI.Console
             if (resp.Status)
             {
                 listView1.Items.Remove(listView1.SelectedItems[0]);
-                Text = "Pokemon List | User: " + profile.Profile.Username + " | Pokemons: " + listView1.Items.Count + "/" + profile.Profile.PokeStorage;
+                Text = "Pokemon Liste | User: " + profile.Profile.Username + " | Pokemon: " + listView1.Items.Count + "/" + profile.Profile.PokeStorage;
             }
             else
                 MessageBox.Show(resp.Message + " transfer failed!", "Transfer Status", MessageBoxButtons.OK);
@@ -359,9 +359,9 @@ namespace PokemonGo.RocketAPI.Console
             }
 
             if (failed != string.Empty)
-                MessageBox.Show("Succesfully evolved " + evolved + "/" + total + " Pokemons. Failed: " + failed, "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Erfolgreich Entwickelt " + evolved + "/" + total + " Pokemon. Failed: " + failed, "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MessageBox.Show("Succesfully evolved " + evolved + "/" + total + " Pokemons.", "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Erfolgreich Entwickelt " + evolved + "/" + total + " Pokemon.", "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (evolved > 0)
             {
                 listView1.Clear();
@@ -392,10 +392,10 @@ namespace PokemonGo.RocketAPI.Console
             }
 
             if (failed != string.Empty)
-                MessageBox.Show("Succesfully transfered " + transfered + "/" + total + " Pokemons. Failed: " + failed, "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Erfolgreich verschickt " + transfered + "/" + total + " Pokemon. Failed: " + failed, "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MessageBox.Show("Succesfully transfered " + transfered + "/" + total + " Pokemons.", "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Text = "Pokemon List | User: " + profile.Profile.Username + " | Pokemons: " + listView1.Items.Count + "/" + profile.Profile.PokeStorage;
+                MessageBox.Show("Erfolgreich verschickt " + transfered + "/" + total + " Pokemon.", "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Text = "Pokemon Liste | User: " + profile.Profile.Username + " | Pokemon: " + listView1.Items.Count + "/" + profile.Profile.PokeStorage;
             EnabledButton(true);
         }
 
@@ -417,9 +417,9 @@ namespace PokemonGo.RocketAPI.Console
                     failed += resp.Message + " ";
             }
             if (failed != string.Empty)
-                MessageBox.Show("Succesfully powered up " + powerdup + "/" + total + " Pokemons. Failed: " + failed, "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Erfolgreich gelevelt " + powerdup + "/" + total + " Pokemon. Failed: " + failed, "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MessageBox.Show("Succesfully powered up " + powerdup + "/" + total + " Pokemons.", "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Erfolgreich gelevelt " + powerdup + "/" + total + " Pokemon.", "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (powerdup > 0)
             {
                 listView1.Clear();
@@ -541,7 +541,7 @@ namespace PokemonGo.RocketAPI.Console
             var pokemon = (PokemonData)listView1.SelectedItems[0].Tag;
             taskResponse resp = new taskResponse(false, string.Empty);
 
-            if (MessageBox.Show(this, pokemon.PokemonId + " with " + pokemon.Cp + " CP thats " + Math.Round(Perfect(pokemon)) + "% perfect", "Are you sure you want to evolve?", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show(this, pokemon.PokemonId + " mit " + pokemon.Cp + " CP " + Math.Round(Perfect(pokemon)) + "% perfekt", "Bist du sicher das du es Entwickeln willst?", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 resp = await evolvePokemon(pokemon);
             }
@@ -555,7 +555,7 @@ namespace PokemonGo.RocketAPI.Console
                 Execute();
             }
             else
-                MessageBox.Show(resp.Message + " evolving failed!", "Evolve Status", MessageBoxButtons.OK);
+                MessageBox.Show(resp.Message + " Entwicklung gescheitert!", "Evolve Status", MessageBoxButtons.OK);
         }
 
         private async void powerUpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -563,7 +563,7 @@ namespace PokemonGo.RocketAPI.Console
             var pokemon = (PokemonData)listView1.SelectedItems[0].Tag;
             taskResponse resp = new taskResponse(false, string.Empty);
 
-            if (MessageBox.Show(this, pokemon.PokemonId + " with " + pokemon.Cp + " CP thats " + Math.Round(Perfect(pokemon)) + "% perfect", "Are you sure you want to power it up?", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show(this, pokemon.PokemonId + " mit " + pokemon.Cp + " CP " + Math.Round(Perfect(pokemon)) + "% perfekt", "Bist du sicher das du es Leveln willst?", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 resp = await PowerUp(pokemon);
             }
@@ -577,7 +577,7 @@ namespace PokemonGo.RocketAPI.Console
                 Execute();
             }
             else
-                MessageBox.Show(resp.Message + " powering up failed!", "PowerUp Status", MessageBoxButtons.OK);
+                MessageBox.Show(resp.Message + " Leveln gescheitert!", "PowerUp Status", MessageBoxButtons.OK);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -592,7 +592,7 @@ namespace PokemonGo.RocketAPI.Console
                 }
                 if (def < 30 || def > 3600)
                 {
-                    MessageBox.Show("Interval has to be between 30 and 3600 seconds!");
+                    MessageBox.Show("Interval muss zwischen 30 und 3600 Sekunden sein!");
                     textBox2.Text = "60";
                     checkBox1.Checked = false;
                 }
@@ -626,7 +626,7 @@ namespace PokemonGo.RocketAPI.Console
         private async void btnFullPowerUp_Click(object sender, EventArgs e)
         {
             EnabledButton(false);
-            DialogResult result = MessageBox.Show("This process may take some time.", "Transfer status", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Dieser Prozess dauert ein wenig.", "Transfer status", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.OK)
             {
                 var selectedItems = listView1.SelectedItems;
@@ -651,11 +651,11 @@ namespace PokemonGo.RocketAPI.Console
                     {
                         if (powerUps > 0)
                         {
-                            MessageBox.Show("Pokemon succesfully powered " + powerUps + " times up.", "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Pokemon erfolgreich gelevelt " + powerUps + " times up.", "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            MessageBox.Show("Pokemon not powered up. Not enough Stardust or Candy.", "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Pokemon nicht gelevelt. Nicht genügen Sternenstaub oder Candys.", "Transfer status", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         i = 1;
                         EnabledButton(true);
