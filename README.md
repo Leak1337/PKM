@@ -1,5 +1,6 @@
 Credits to:
-
+  
+  - https://github.com/Arli/PokemonGo-Bot
   - https://github.com/FeroxRev/Pokemon-Go-Rocket-API
   - https://github.com/UntilSunrise/Pokemon-Go-Rocket-API
   - https://github.com/martin-podlubny
