@@ -1,1 +1,0 @@
-C:\Random\PKM Bot\PKM\PokemonGo.RocketAPI.Console\bin\Debug\PokemonGo.RocketAPI.Console.exe.config
